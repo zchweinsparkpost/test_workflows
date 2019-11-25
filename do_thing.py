@@ -23,6 +23,7 @@ def get_git_diff_by_branch(from_branch, to_branch):
 def get_git_file_modified_time(git_object):
     output = subprocess.run(["git", "log", "-1", "--format=\"%ad\"", "--", git_object], stdout=subprocess.PIPE)
     output_data = output.stdout.decode("utf-8").replace("\"", "").strip()
+    print(output_data)
     parsed_date = datetime.datetime.strptime(output_data, "%a %b %d %H:%M:%S %Y %z")
     parsed_utc_date = parsed_date.astimezone(pytz.timezone("utc"))
     return parsed_utc_date
