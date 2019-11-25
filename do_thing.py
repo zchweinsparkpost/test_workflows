@@ -30,7 +30,7 @@ def get_git_file_modified_time(git_object):
 
 
 def get_git_diff_by_file_time(files_loc):
-    output = subprocess.run(["git", "ls-tree", "-r", "--name-only", "HEAD", files_loc], stdout=subprocess.PIPE)
+    output = subprocess.run(["git", "ls-tree", "-r", "--name-only", "master", files_loc], stdout=subprocess.PIPE)
     output_data = output.stdout.decode("utf-8")
     print(output_data)
     data_lines = output_data.splitlines()
