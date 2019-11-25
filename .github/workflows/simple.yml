@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
       run: |
-        echo python3 do_thing.py
+        python3 do_thing.py
         echo test, and deploy your project.
