@@ -11,5 +11,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
       run: |
-        python3 do_thing.py
+        git status
+	git branch
         echo test, and deploy your project.
