@@ -64,3 +64,4 @@ def map_changes_to_string(files):
 x = get_git_diff_by_file_time("tables")
 y = reduce_to_changes_less_than(x)
 files = map_changes_to_string(y)
+print(files)
